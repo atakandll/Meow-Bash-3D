@@ -356,8 +356,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30b612e591be43c6a644dc48fdc8ed58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 2
-  height: 1.7
+  distance: 2.05
+  height: 1.15
   target: {fileID: 1750584112}
   smoothness: 0.1
 --- !u!1 &963194225
@@ -522,10 +522,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd5452fd67ecaaa41a9e99e7756a88b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 6
+  Speed: 1
   gravity: 10
-  JumpForce: 3
-  StopForce: 3
+  JumpForce: 4
+  StopForce: 1.25
+  jumpEffect: {fileID: 100000, guid: 83cd9cc9f9c88824ba18dc59b05ae328, type: 3}
 --- !u!143 &1750584110
 CharacterController:
   m_ObjectHideFlags: 0

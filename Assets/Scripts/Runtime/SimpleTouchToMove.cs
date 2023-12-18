@@ -13,6 +13,7 @@ namespace Runtime
         public float gravity = 10f;
         public float JumpForce;
         public float StopForce;
+        public GameObject jumpEffect;
         
         #endregion
 
@@ -63,7 +64,7 @@ namespace Runtime
                     _moveDirection = new Vector3(_touch.position.x - _initPos.x, 0, _touch.position.y - _initPos.y);
                     Quaternion targetRotation = _moveDirection != Vector3.zero ? Quaternion.LookRotation(_moveDirection) : transform.rotation;
                     transform.rotation = targetRotation;
-                    _moveDirection = _moveDirection * Speed;
+                    _moveDirection = _moveDirection.normalized * Speed;
                 }
             }
             else
@@ -75,6 +76,7 @@ namespace Runtime
 
             if (Input.GetMouseButtonUp(0) && _characterController.isGrounded)
             {
+                Instantiate(jumpEffect, transform.position, Quaternion.identity);
                 _moveDirection.y += JumpForce;
             }
             _moveDirection.y -= (gravity * Time.deltaTime);
