@@ -56,6 +56,23 @@ namespace Runtime
             timerValue = 20;
             Application.LoadLevel(Application.loadedLevelName);
         }
+
+
+        public void WatchExtraTimeVideo()
+        {
+            //
+            //
+            GetExtraTime();
+        }
+        public void GetExtraTime()
+        {
+            timerValue = 10;
+            textScore.text = timerValue.ToString();
+            InvokeRepeating("SetTimer",1,1);
+            GameEnded = false;
+            endScreen.SetActive(false);
+
+        }
     }
 }
 
