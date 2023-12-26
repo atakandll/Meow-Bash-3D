@@ -27,15 +27,13 @@ namespace Runtime
                     rooms[i-1].SetActive(true);
             }
         }
+        
 
-        private void Update()
+        public void StartGame()
         {
-            if (Input.GetMouseButtonDown(0) && !GameStartarted)
-            {
-                GameStartarted = true;
-                tutorials[0].SetActive(false);
-                InvokeRepeating("SetTimer",1,1);
-            }
+            GameStartarted = true;
+            tutorials[0].SetActive(false);
+            InvokeRepeating("SetTimer",1,1);
         }
 
         public void SetTimer()
