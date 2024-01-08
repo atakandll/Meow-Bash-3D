@@ -462,6 +462,83 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 2.0663643e-14, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &168761337
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 168761338}
+  - component: {fileID: 168761340}
+  - component: {fileID: 168761339}
+  m_Layer: 5
+  m_Name: CoinButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &168761338
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168761337}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.186045, y: 1.186045, z: 1.186045}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1037904171}
+  m_Father: {fileID: 1214913617}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 26, y: -623}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &168761339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168761337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 9cd3ff918038dd149b5193c7aa63a55a, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &168761340
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168761337}
+  m_CullTransparentMesh: 1
 --- !u!1 &175565835
 GameObject:
   m_ObjectHideFlags: 0
@@ -723,6 +800,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!1001 &217636347
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -812,6 +890,7 @@ GameObject:
   - component: {fileID: 228747610}
   - component: {fileID: 228747609}
   - component: {fileID: 228747608}
+  - component: {fileID: 228747612}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -905,6 +984,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &228747612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228747607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae9a4abfa4e4495fa2d1360e9c9a4e62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinText: {fileID: 1037904172}
 --- !u!1001 &239631623
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1112,6 +1204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!1001 &371941547
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1717,6 +1810,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!1 &527034376 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6955533357695934811, guid: 3f1733ed384115b40bdd25a9f84f0923, type: 3}
@@ -1770,6 +1864,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!1 &534261505
 GameObject:
   m_ObjectHideFlags: 0
@@ -2109,6 +2204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!1001 &581894025
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2547,6 +2643,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -2874,6 +2971,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!1001 &782161633
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3279,6 +3377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!1 &862641110 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 83369466370475762, guid: 3b4f4f9efb9141a438e1615dcd3ab091, type: 3}
@@ -3332,6 +3431,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!1 &877242164
 GameObject:
   m_ObjectHideFlags: 0
@@ -4151,6 +4251,141 @@ MonoBehaviour:
   height: 2.5
   target: {fileID: 2554720417120351992}
   smoothness: 0.1
+--- !u!1 &1037904170
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1037904171}
+  - component: {fileID: 1037904173}
+  - component: {fileID: 1037904172}
+  m_Layer: 5
+  m_Name: CoinText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1037904171
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037904170}
+  m_LocalRotation: {x: -0, y: -0, z: 0.33594263, w: 0.94188243}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 168761338}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 224.53442, y: 148.86014}
+  m_SizeDelta: {x: 236.7492, y: 32.1669}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1037904172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037904170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 0
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 0b5dfad218b25544e8a69234c775df50, type: 2}
+  m_sharedMaterial: {fileID: 296965476894327585, guid: 0b5dfad218b25544e8a69234c775df50, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 70
+  m_fontSizeBase: 70
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 16
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0.43902594, y: 0, z: 2.8601837, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1037904173
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037904170}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1038680651
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4281,6 +4516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!1 &1080882971 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6955533357695934811, guid: 3f1733ed384115b40bdd25a9f84f0923, type: 3}
@@ -4334,6 +4570,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!1 &1098841398 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 06cd0cc301b31cc408572e78dd7bf08d, type: 3}
@@ -4387,6 +4624,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!1001 &1118705578
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4498,6 +4736,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!1001 &1136181587
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4620,6 +4859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!4 &1140185315 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 248639545562727001, guid: 395129bff7629b841b72d4ae9b1c868e, type: 3}
@@ -4836,6 +5076,7 @@ RectTransform:
   - {fileID: 1160812135}
   - {fileID: 1260768170}
   - {fileID: 1859182138}
+  - {fileID: 168761338}
   - {fileID: 1658956458}
   - {fileID: 1710111229}
   - {fileID: 1909284576}
@@ -5113,6 +5354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!4 &1264711721 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f17f6dd6b6faff2419e4e1bba4fc4f51, type: 3}
@@ -5654,6 +5896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!1 &1370555174
 GameObject:
   m_ObjectHideFlags: 0
@@ -5823,6 +6066,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!1001 &1435653033
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6135,6 +6379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!1 &1509925551
 GameObject:
   m_ObjectHideFlags: 0
@@ -6606,6 +6851,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!1 &1547059090
 GameObject:
   m_ObjectHideFlags: 0
@@ -6735,6 +6981,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!1 &1627190705
 GameObject:
   m_ObjectHideFlags: 0
@@ -6901,7 +7148,7 @@ RectTransform:
   m_Children:
   - {fileID: 2042706153}
   m_Father: {fileID: 1214913617}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 39.26}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -7131,6 +7378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!1 &1696293136
 GameObject:
   m_ObjectHideFlags: 0
@@ -7297,7 +7545,7 @@ RectTransform:
   m_Children:
   - {fileID: 1340121624}
   m_Father: {fileID: 1214913617}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 39.26}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -7432,6 +7680,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!1 &1746998403
 GameObject:
   m_ObjectHideFlags: 0
@@ -8086,6 +8335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!1 &1859182137
 GameObject:
   m_ObjectHideFlags: 0
@@ -8426,6 +8676,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!1 &1909284575
 GameObject:
   m_ObjectHideFlags: 0
@@ -8467,7 +8718,7 @@ RectTransform:
   - {fileID: 1443466184}
   - {fileID: 832069145}
   m_Father: {fileID: 1214913617}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -8655,6 +8906,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!1001 &2011824143
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8785,6 +9037,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!1 &2028268393
 GameObject:
   m_ObjectHideFlags: 0
@@ -8938,6 +9191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!1001 &2042048338
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9053,6 +9307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!1 &2042706152
 GameObject:
   m_ObjectHideFlags: 0
@@ -9732,6 +9987,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!1 &2120144953
 GameObject:
   m_ObjectHideFlags: 0
@@ -9861,6 +10117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!1 &2121913267
 GameObject:
   m_ObjectHideFlags: 0
@@ -12231,6 +12488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!1 &3843930862489369019
 GameObject:
   m_ObjectHideFlags: 0
@@ -12691,6 +12949,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!4 &4848619367181413995
 Transform:
   m_ObjectHideFlags: 0
@@ -12785,6 +13044,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!1 &4918643513873367774
 GameObject:
   m_ObjectHideFlags: 0
@@ -13111,6 +13371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 100
+  coins: 0
 --- !u!33 &5370718928263371823
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -13612,6 +13873,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!4 &5863934804173006429
 Transform:
   m_ObjectHideFlags: 0
@@ -13739,6 +14001,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 100
+  coins: 0
 --- !u!1 &6008878217054070174
 GameObject:
   m_ObjectHideFlags: 0
@@ -13841,6 +14104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!1 &6034552073202755866
 GameObject:
   m_ObjectHideFlags: 0
@@ -13908,6 +14172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 100
+  coins: 0
 --- !u!1 &6097669112923277527
 GameObject:
   m_ObjectHideFlags: 0
@@ -14030,6 +14295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 100
+  coins: 0
 --- !u!1 &6181313824878997521
 GameObject:
   m_ObjectHideFlags: 0
@@ -14104,6 +14370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!1 &6250317787575333855
 GameObject:
   m_ObjectHideFlags: 0
@@ -14404,6 +14671,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!1 &6421008505413279111
 GameObject:
   m_ObjectHideFlags: 0
@@ -14520,6 +14788,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!4 &6720978496403462958
 Transform:
   m_ObjectHideFlags: 0
@@ -14662,6 +14931,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!1 &6832013486760590991
 GameObject:
   m_ObjectHideFlags: 0
@@ -14762,6 +15032,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!23 &6979284334814213580
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14847,6 +15118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!23 &6991863327402627746
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14932,6 +15204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 100
+  coins: 0
 --- !u!23 &6991879524047579580
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15018,6 +15291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!33 &7155341342143111629
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -15090,6 +15364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!33 &7260016385263079550
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -15141,6 +15416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!4 &7279849386772585457
 Transform:
   m_ObjectHideFlags: 0
@@ -15213,6 +15489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!4 &7311652267834641447
 Transform:
   m_ObjectHideFlags: 0
@@ -15271,6 +15548,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!1 &7367961094978484618
 GameObject:
   m_ObjectHideFlags: 0
@@ -15377,6 +15655,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 100
+  coins: 0
 --- !u!1 &7429227370681683217
 GameObject:
   m_ObjectHideFlags: 0
@@ -15478,6 +15757,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!4 &7464331644029341714
 Transform:
   m_ObjectHideFlags: 0
@@ -15670,6 +15950,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!1 &7616638759498838452
 GameObject:
   m_ObjectHideFlags: 0
@@ -15856,6 +16137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!4 &7751843364244254655
 Transform:
   m_ObjectHideFlags: 0
@@ -16110,6 +16392,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 100
+  coins: 0
 --- !u!33 &8043462764606767642
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -16161,6 +16444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!1 &8080383175255889359
 GameObject:
   m_ObjectHideFlags: 0
@@ -16225,6 +16509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 100
+  coins: 0
 --- !u!1 &8161099208323847830
 GameObject:
   m_ObjectHideFlags: 0
@@ -16299,6 +16584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!4 &8209750040677488788
 Transform:
   m_ObjectHideFlags: 0
@@ -16357,6 +16643,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!1 &8225399369632863542
 GameObject:
   m_ObjectHideFlags: 0
@@ -16438,6 +16725,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!4 &8282227800028392362
 Transform:
   m_ObjectHideFlags: 0
@@ -16528,6 +16816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 100
+  coins: 0
 --- !u!137 &8384548196238941358
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -16688,6 +16977,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!1 &8419550342626631543
 GameObject:
   m_ObjectHideFlags: 0
@@ -16776,6 +17066,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!1 &8506432791102887637
 GameObject:
   m_ObjectHideFlags: 0
@@ -16878,6 +17169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 100
+  coins: 0
 --- !u!23 &8533701038696188647
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16963,6 +17255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!1 &8563931577491805075
 GameObject:
   m_ObjectHideFlags: 0
@@ -17043,6 +17336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!4 &8616644271564961624
 Transform:
   m_ObjectHideFlags: 0
@@ -17143,6 +17437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 100
+  coins: 0
 --- !u!4 &8630662268186044841
 Transform:
   m_ObjectHideFlags: 0
@@ -17244,6 +17539,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!33 &8748851070947986612
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -17295,6 +17591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!23 &8884141787701452298
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17380,6 +17677,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!33 &8898692000093276704
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -17542,6 +17840,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!4 &8999529686610440633
 Transform:
   m_ObjectHideFlags: 0
@@ -17609,6 +17908,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 100
+  coins: 0
 --- !u!4 &9019876105847083932
 Transform:
   m_ObjectHideFlags: 0
@@ -17715,6 +18015,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 50
+  coins: 0
 --- !u!4 &9134748845202541844
 Transform:
   m_ObjectHideFlags: 0
@@ -17773,6 +18074,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points: 100
+  coins: 0
 --- !u!1 &9139937453644031936
 GameObject:
   m_ObjectHideFlags: 0
