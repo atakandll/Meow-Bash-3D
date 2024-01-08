@@ -38,6 +38,8 @@ namespace Runtime
         
         private void Awake()
         {
+            float bonusSpeed = 0.1f * PlayerPrefs.GetInt("speedLevel", 1);
+            Speed += bonusSpeed;
             _animator = GetComponent<Animator>();
             _characterController = GetComponent<CharacterController>();
         }

@@ -10,7 +10,7 @@ namespace Runtime
 
         private void Awake()
         {
-            coins = PlayerPrefs.GetInt("coins", 1);
+            coins = PlayerPrefs.GetInt("coinsLevel", 1);
         }
     }
 }

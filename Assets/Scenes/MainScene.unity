@@ -232,7 +232,7 @@ GameObject:
   - component: {fileID: 52490783}
   - component: {fileID: 52490782}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: SpeedLevelText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -441,7 +441,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 61593023}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 228747612}
+        m_TargetAssemblyTypeName: Runtime.MainUI, Assembly-CSharp
+        m_MethodName: UpgradeCoinsButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &61593023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1257,6 +1269,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinText: {fileID: 1037904172}
+  currentCoins: 500
+  coinsPriceText: {fileID: 2077366001}
+  coinsLevelText: {fileID: 2102862485}
+  coinsUpgradeButton: {fileID: 61593022}
+  speedPriceText: {fileID: 1194016065}
+  speedLevelText: {fileID: 52490782}
+  speedUpgradeButton: {fileID: 1639620818}
+  timePriceText: {fileID: 1160282813}
+  timeLevelText: {fileID: 380992092}
+  timeUpgradeButton: {fileID: 2077067035}
 --- !u!1001 &239631623
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1477,7 +1499,7 @@ GameObject:
   - component: {fileID: 348280881}
   - component: {fileID: 348280880}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: SpeedNameText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1757,7 +1779,7 @@ GameObject:
   - component: {fileID: 380992093}
   - component: {fileID: 380992092}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: TimeLevelText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3587,7 +3609,7 @@ GameObject:
   - component: {fileID: 789407841}
   - component: {fileID: 789407840}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: TimeNameText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5623,7 +5645,7 @@ GameObject:
   - component: {fileID: 1160282814}
   - component: {fileID: 1160282813}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: TimePriceText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5893,7 +5915,7 @@ GameObject:
   - component: {fileID: 1194016066}
   - component: {fileID: 1194016065}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: SpeedPriceText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6114,7 +6136,7 @@ GameObject:
   - component: {fileID: 1239396812}
   - component: {fileID: 1239396811}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: CoinNameText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6778,7 +6800,7 @@ MonoBehaviour:
   tutorials:
   - {fileID: 1214913614}
   endScreen: {fileID: 1325862323}
-  timerValue: 20
+  timerValue: 15
   textTimer: {fileID: 1370555175}
   textScore: {fileID: 879167408}
   finalTextScore: {fileID: 2053811542}
@@ -7084,7 +7106,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 20
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5a07ac706af4fa948b69aeb52f987d8d, type: 2}
   m_sharedMaterial: {fileID: 5335894944193176350, guid: 5a07ac706af4fa948b69aeb52f987d8d, type: 2}
@@ -8350,7 +8372,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1639620819}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 228747612}
+        m_TargetAssemblyTypeName: Runtime.MainUI, Assembly-CSharp
+        m_MethodName: UpgradeSpeedButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1639620819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11161,7 +11195,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2077067036}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 228747612}
+        m_TargetAssemblyTypeName: Runtime.MainUI, Assembly-CSharp
+        m_MethodName: UpgradeTimeButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2077067036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11212,7 +11258,7 @@ GameObject:
   - component: {fileID: 2077366002}
   - component: {fileID: 2077366001}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: CoinPriceText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11610,7 +11656,7 @@ GameObject:
   - component: {fileID: 2102862486}
   - component: {fileID: 2102862485}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: CoinLevelText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

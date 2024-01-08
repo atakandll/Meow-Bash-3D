@@ -77,7 +77,7 @@ namespace Runtime
         }
         public void GetExtraTime()
         {
-            timerValue = 10;
+            timerValue = 10 + PlayerPrefs.GetInt("timeLevel",1);
             textTimer.text = timerValue.ToString();
             InvokeRepeating("SetTimer",1,1);
             GameEnded = false;
