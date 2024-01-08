@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Runtime
 {
@@ -16,7 +17,11 @@ namespace Runtime
         public GameObject[] tutorials;
         public GameObject endScreen;
         [SerializeField] private int timerValue;
+        [SerializeField] private TextMeshProUGUI textTimer;
         [SerializeField] private TextMeshProUGUI textScore;
+        [SerializeField] private TextMeshProUGUI finalTextScore;
+        [SerializeField] private TextMeshProUGUI bestScoreText;
+        
         
 
         private void Awake()
@@ -26,6 +31,7 @@ namespace Runtime
                 if(i<=Level)
                     rooms[i-1].SetActive(true);
             }
+            bestScoreText.text ="Best: " + PlayerPrefs.GetInt("scoreMax",0).ToString();
         }
         
 
@@ -39,18 +45,25 @@ namespace Runtime
         public void SetTimer()
         {
             timerValue--;
-            textScore.text = timerValue.ToString();
+            textTimer.text = timerValue.ToString();
             
             if (timerValue == 0)
             {
                 GameEnded = true;
                 CancelInvoke();
                 endScreen.SetActive(true);
+                finalTextScore.text = "Score: " + textScore.text;
             }
         }
 
         public void RestartGame()
         {
+            int currentScore = int.Parse(textScore.text);
+            int scoreMax = PlayerPrefs.GetInt("scoreMax",0);
+            
+            if (currentScore > scoreMax)
+                PlayerPrefs.SetInt("scoreMax",currentScore);
+            
             timerValue = 20;
             Application.LoadLevel(Application.loadedLevelName);
         }
@@ -65,7 +78,7 @@ namespace Runtime
         public void GetExtraTime()
         {
             timerValue = 10;
-            textScore.text = timerValue.ToString();
+            textTimer.text = timerValue.ToString();
             InvokeRepeating("SetTimer",1,1);
             GameEnded = false;
             endScreen.SetActive(false);
