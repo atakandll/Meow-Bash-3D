@@ -17,7 +17,6 @@ namespace Runtime
         {
             if (hit.gameObject.CompareTag("hittable"))
             {
-                Debug.Log("object hitted" + hit.gameObject.name);
                 hit.gameObject.tag = "hitted";
                 _rigidbody = hit.gameObject.GetComponent<Rigidbody>();
                 HittableObjects hittableObjects = hit.gameObject.GetComponent<HittableObjects>();

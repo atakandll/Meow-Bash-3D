@@ -25,7 +25,6 @@ namespace Runtime
         private int speedActualPrice;
         
         
-      
         [Header("Time Upgrade")]
         public TextMeshProUGUI timePriceText;
         public TextMeshProUGUI timeLevelText;
