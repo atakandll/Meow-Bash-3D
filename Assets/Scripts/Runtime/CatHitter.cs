@@ -11,20 +11,26 @@ namespace Runtime
         public GameObject TextScore;
         public GameObject TextScore3D;
         public GameObject[] hitParticles;
+        public GameManager gameManager;
+        public bool isAI = false;
         
         private Rigidbody _rigidbody;
         private void OnControllerColliderHit(ControllerColliderHit hit)
         {
-            if (hit.gameObject.CompareTag("hittable"))
+            if (!isAI)
             {
-                hit.gameObject.tag = "hitted";
-                _rigidbody = hit.gameObject.GetComponent<Rigidbody>();
-                HittableObjects hittableObjects = hit.gameObject.GetComponent<HittableObjects>();
-                HitEffect(_rigidbody,hit);
-                Score3DEffect(hittableObjects);
-                GetCoins(hittableObjects);
+                if (hit.gameObject.CompareTag("hittable"))
+                {
+                    hit.gameObject.tag = "hitted";
+                    _rigidbody = hit.gameObject.GetComponent<Rigidbody>();
+                    HittableObjects hittableObjects = hit.gameObject.GetComponent<HittableObjects>();
+                    HitEffect(_rigidbody,hit);
+                    Score3DEffect(hittableObjects);
+                    GetCoins(hittableObjects);
                 
-            }   
+                } 
+            }
+              
         }
         public void GetCoins(HittableObjects hittableObjects)
         {
@@ -53,6 +59,29 @@ namespace Runtime
             TextScore3D.GetComponent<TextMesh>().text = "+" + hittableObjects.Points;
             iTween.PunchScale(TextScore3D,new Vector3(1.25f,1.25f,1.25f),.5f);
             Invoke("Reset",.5f);
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (isAI && gameManager.GameStartarted )
+            {
+                if (other.gameObject.CompareTag("hittable"))
+                {
+                    _rigidbody = other.gameObject.GetComponent<Rigidbody>();
+                    HittableObjects hittableObjects = other.gameObject.GetComponent<HittableObjects>();
+                    _rigidbody.isKinematic = false;
+                    _rigidbody.AddExplosionForce(75,transform.position + Vector3.down,15);
+                    Instantiate(hitParticles[Random.Range(0, hitParticles.Length)], other.transform.position, Quaternion.identity);
+                    iTween.PunchScale(TextScore,new Vector3(1.25f,1.25f,1.25f),.3f);
+
+                    if (other.gameObject.name != "touched")
+                    {
+                        //calculate the coins and score for ai
+                    }
+                    other.gameObject.name = "touched";
+                    
+                }
+            }
         }
 
         public void Reset()
