@@ -12,6 +12,12 @@ namespace Runtime
         public Animator aiAnim;
         public int score = 0;
         public GameManager gameManager;
+        public Texture[] skins;
+
+        private void Start()
+        {
+            GetComponentInChildren<Renderer>().material.mainTexture = skins[Random.Range(0, skins.Length)];
+        }
 
         public void StartGame()
         {
@@ -45,6 +51,11 @@ namespace Runtime
             {
                 ChangeDestination();
             }
+        }
+
+        public void GetPoints(int scoreToAdd)
+        {
+            score += scoreToAdd;
         }
     }
 }

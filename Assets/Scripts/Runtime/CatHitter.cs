@@ -14,7 +14,6 @@ namespace Runtime
         public GameManager gameManager;
         public bool isAI = false;
         
-        private Rigidbody _rigidbody;
         private void OnControllerColliderHit(ControllerColliderHit hit)
         {
             if (!isAI)
@@ -22,7 +21,7 @@ namespace Runtime
                 if (hit.gameObject.CompareTag("hittable"))
                 {
                     hit.gameObject.tag = "hitted";
-                    _rigidbody = hit.gameObject.GetComponent<Rigidbody>();
+                    Rigidbody _rigidbody = hit.gameObject.GetComponent<Rigidbody>();
                     HittableObjects hittableObjects = hit.gameObject.GetComponent<HittableObjects>();
                     HitEffect(_rigidbody,hit);
                     Score3DEffect(hittableObjects);
@@ -63,20 +62,22 @@ namespace Runtime
 
         private void OnTriggerEnter(Collider other)
         {
-            if (isAI && gameManager.GameStartarted )
+            if (isAI && gameManager.GameStartarted  && !gameManager.GameEnded)
             {
                 if (other.gameObject.CompareTag("hittable"))
                 {
-                    _rigidbody = other.gameObject.GetComponent<Rigidbody>();
-                    HittableObjects hittableObjects = other.gameObject.GetComponent<HittableObjects>();
+                    Rigidbody _rigidbody = other.gameObject.GetComponent<Rigidbody>();
+                    HittableObjects _hittableObjects = other.gameObject.GetComponent<HittableObjects>();
                     _rigidbody.isKinematic = false;
                     _rigidbody.AddExplosionForce(75,transform.position + Vector3.down,15);
-                    Instantiate(hitParticles[Random.Range(0, hitParticles.Length)], other.transform.position, Quaternion.identity);
+                    Instantiate(hitParticles[Random.Range(0, hitParticles.Length)], other.gameObject.transform.position, Quaternion.identity);
                     iTween.PunchScale(TextScore,new Vector3(1.25f,1.25f,1.25f),.3f);
 
                     if (other.gameObject.name != "touched")
                     {
                         //calculate the coins and score for ai
+                        AI ai = GetComponent<AI>();
+                        ai.GetPoints(_hittableObjects.Points * 3);
                     }
                     other.gameObject.name = "touched";
                     
