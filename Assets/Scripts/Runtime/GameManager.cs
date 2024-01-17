@@ -21,6 +21,7 @@ namespace Runtime
         [SerializeField] private TextMeshProUGUI textScore;
         [SerializeField] private TextMeshProUGUI finalTextScore;
         [SerializeField] private TextMeshProUGUI bestScoreText;
+        public AI[] ai;
         
         
 
@@ -40,6 +41,11 @@ namespace Runtime
             GameStartarted = true;
             tutorials[0].SetActive(false);
             InvokeRepeating("SetTimer",1,1);
+            foreach (var a in ai)
+            {
+                a.StartGame();
+                
+            }
         }
 
         public void SetTimer()
