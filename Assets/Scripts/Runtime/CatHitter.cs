@@ -71,7 +71,6 @@ namespace Runtime
                     _rigidbody.isKinematic = false;
                     _rigidbody.AddExplosionForce(75,transform.position + Vector3.down,15);
                     Instantiate(hitParticles[Random.Range(0, hitParticles.Length)], other.gameObject.transform.position, Quaternion.identity);
-                    iTween.PunchScale(TextScore,new Vector3(1.25f,1.25f,1.25f),.3f);
 
                     if (other.gameObject.name != "touched")
                     {

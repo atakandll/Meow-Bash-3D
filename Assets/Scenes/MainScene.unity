@@ -8637,7 +8637,7 @@ GameObject:
   - component: {fileID: 1260687186}
   - component: {fileID: 1260687185}
   m_Layer: 0
-  m_Name: Player_IA_1 (1)
+  m_Name: CatAI_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8676,8 +8676,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2600228834b47298c5edcbc2847ab09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextScore: {fileID: 0}
-  TextScore3D: {fileID: 0}
+  TextScore: {fileID: 879167406}
+  TextScore3D: {fileID: 43073709}
   hitParticles:
   - {fileID: 100000, guid: 979632a27455af442bd2d8f36eb0ffce, type: 3}
   - {fileID: 100000, guid: 83cd9cc9f9c88824ba18dc59b05ae328, type: 3}
@@ -24161,7 +24161,7 @@ GameObject:
   - component: {fileID: 8818494326117399576}
   - component: {fileID: 8818494326117399575}
   m_Layer: 0
-  m_Name: Player_IA_1
+  m_Name: CatAI_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25622,8 +25622,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2600228834b47298c5edcbc2847ab09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextScore: {fileID: 0}
-  TextScore3D: {fileID: 0}
+  TextScore: {fileID: 879167406}
+  TextScore3D: {fileID: 43073709}
   hitParticles:
   - {fileID: 100000, guid: 979632a27455af442bd2d8f36eb0ffce, type: 3}
   - {fileID: 100000, guid: 83cd9cc9f9c88824ba18dc59b05ae328, type: 3}
