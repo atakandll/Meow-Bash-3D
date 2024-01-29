@@ -22,13 +22,18 @@ namespace Runtime
         [SerializeField] private TextMeshProUGUI finalTextScore;
         [SerializeField] private TextMeshProUGUI bestScoreText;
         [SerializeField] private TextMeshProUGUI[] finalScoresText;
+        [SerializeField] private TextMeshProUGUI levelText;
+        [SerializeField] private GameObject Player;
         public string[] finalScores;
+        
         public AI[] ai;
         
         
 
         private void Awake()
         {
+            Level = PlayerPrefs.GetInt("level", 1);
+            levelText.text = "Level: " + Level;
             for (int i = 1; i <= rooms.Length; i++)
             {
                 if(i<=Level)
@@ -43,6 +48,7 @@ namespace Runtime
             GameStartarted = true;
             tutorials[0].SetActive(false);
             InvokeRepeating("SetTimer",1,1);
+            
             foreach (var a in ai)
             {
                 a.StartGame();
@@ -76,6 +82,14 @@ namespace Runtime
         public void RestartGame()
         {
             int currentScore = int.Parse(textScore.text);
+            int scoreTotal = PlayerPrefs.GetInt("scoreTotal",0);
+            scoreTotal += currentScore;
+            PlayerPrefs.SetInt("scoreTotal",scoreTotal);
+            int actualLevel = Mathf.FloorToInt(scoreTotal / 1000) + 1;
+            PlayerPrefs.SetInt("level",actualLevel);
+
+           
+            
             int scoreMax = PlayerPrefs.GetInt("scoreMax",0);
             
             if (currentScore > scoreMax)
