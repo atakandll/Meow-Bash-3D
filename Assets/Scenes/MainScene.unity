@@ -6354,7 +6354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71987f4dfd1b4afea88db8319ac34ff2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AchievementID: 
+  AchievementID: ScoreCheck
   check: {fileID: 1534816235}
 --- !u!1 &825000423
 GameObject:
@@ -11536,6 +11536,7 @@ MonoBehaviour:
   DaysPlayed: 0
   skin2Button: {fileID: 1696293138}
   currentCoins: 2000
+  currentScore: 0
 --- !u!114 &1343516537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16886,7 +16887,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1815739234
 RectTransform:
   m_ObjectHideFlags: 0
