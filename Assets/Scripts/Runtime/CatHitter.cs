@@ -81,6 +81,12 @@ namespace Runtime
                     other.gameObject.name = "touched";
                     
                 }
+
+                if (other.gameObject.CompareTag("Murr"))
+                {
+                    BoxCollider boxCollider = other.gameObject.GetComponent<BoxCollider>();
+                    boxCollider.isTrigger = false;
+                }
             }
         }
 

@@ -24,6 +24,11 @@ namespace Runtime
         [SerializeField] private TextMeshProUGUI[] finalScoresText;
         [SerializeField] private TextMeshProUGUI levelText;
         [SerializeField] private GameObject Player;
+        [SerializeField] private GameObject level1Obstacle;
+        [SerializeField] private GameObject level2Obstacle;
+        [SerializeField] private GameObject level3Obstacle;
+        [SerializeField] private GameObject level4Obstacle;
+        [SerializeField] private GameObject level5Obstacle;
         public string[] finalScores;
         
         public AI[] ai;
@@ -47,6 +52,7 @@ namespace Runtime
         {
             GameStartarted = true;
             tutorials[0].SetActive(false);
+            SetInitialPositions();
             InvokeRepeating("SetTimer",1,1);
             
             foreach (var a in ai)
@@ -54,6 +60,86 @@ namespace Runtime
                 a.StartGame();
                 
             }
+        }
+        private void SetInitialPositions()
+        {
+            // Örneğin, her levelde başlangıç konumları farklı olsun.
+            switch (Level)
+            {
+                case 1:
+                    SetPositionsForLevel1();
+                    level1Obstacle.SetActive(false);
+                    Debug.Log("Level 1 obstacle destroyed");
+                    break;
+                case 2:
+                    SetPositionsForLevel2();
+                    level2Obstacle.SetActive(false);
+                    Debug.Log("Level 2 obstacle destroyed");
+                    break;
+                case 3:
+                    SetPositionsForLevel3();
+                    level3Obstacle.SetActive(false);
+                    Debug.Log("Level 3 obstacle destroyed");
+                    break;
+                case 4:
+                    SetPositionsForLevel4();
+                    level4Obstacle.SetActive(false);
+                    Debug.Log("Level 4 obstacle destroyed");
+                    break;
+                case  5:
+                    SetPositionsForLevel5();
+                    level5Obstacle.SetActive(false);
+                    Debug.Log("Level 5 obstacle destroyed");
+                    break;
+               
+            }
+        }
+
+        private void SetPositionsForLevel1()
+        {
+          
+            Player.transform.position = new Vector3(0f, 1f, 0f);
+            ai[0].transform.position = new Vector3(1f, 1f, 0f);
+            ai[1].transform.position = new Vector3(-1f, 1f, 0f);
+            ai[2].transform.position = new Vector3(1f, -1f, 0f);
+            ai[3].transform.position = new Vector3(-1f, -1f, 0f);
+        }
+
+        private void SetPositionsForLevel2()
+        {
+           
+            Player.transform.position = new Vector3(0f, 2f, 0f);
+            ai[0].transform.position = new Vector3(2f, 2f, 0f);
+            ai[1].transform.position = new Vector3(-2f, 2f, 0f);
+            ai[2].transform.position = new Vector3(2f, -2f, 0f);
+            ai[3].transform.position = new Vector3(-2f, -2f, 0f);
+        }
+        private void SetPositionsForLevel3()
+        {
+            
+            Player.transform.position = new Vector3(0f, 1f, 0f);
+            ai[0].transform.position = new Vector3(1f, 1f, 0f);
+            ai[1].transform.position = new Vector3(-1f, 1f, 0f);
+            ai[2].transform.position = new Vector3(1f, -1f, 0f);
+            ai[3].transform.position = new Vector3(-1f, -1f, 0f);
+        }
+        private void SetPositionsForLevel4()
+        {
+            
+            Player.transform.position = new Vector3(0f, 1f, 0f);
+            ai[0].transform.position = new Vector3(1f, 1f, 0f);
+            ai[1].transform.position = new Vector3(-1f, 1f, 0f);
+            ai[2].transform.position = new Vector3(1f, -1f, 0f);
+            ai[3].transform.position = new Vector3(-1f, -1f, 0f);
+        }
+        private void SetPositionsForLevel5()
+        {
+            
+            Player.transform.position = new Vector3(0f, 1f, 0f);
+            ai[0].transform.position = new Vector3(1f, 1f, 0f);
+            ai[1].transform.position = new Vector3(-1f, 1f, 0f);
+            ai[2].transform.position = new Vector3(1f, -1f, 0f);
+            ai[3].transform.position = new Vector3(-1f, -1f, 0f);
         }
 
         public void SetTimer()

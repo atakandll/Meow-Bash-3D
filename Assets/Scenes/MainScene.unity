@@ -3226,7 +3226,7 @@ GameObject:
   m_TagString: hittable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &247566594
 Transform:
@@ -3457,7 +3457,7 @@ GameObject:
   m_TagString: hittable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &258716881
 Transform:
@@ -6848,7 +6848,7 @@ GameObject:
   m_TagString: hittable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &494831727
 Transform:
@@ -7825,7 +7825,7 @@ GameObject:
   m_TagString: hittable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &576940097
 Transform:
@@ -12684,7 +12684,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &943432512
 Transform:
   m_ObjectHideFlags: 0
@@ -12808,15 +12808,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 945519795}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.6, y: 0, z: -1.97}
+  m_LocalPosition: {x: -2.6, y: 0, z: -1.77}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 671155318}
   - {fileID: 149798942}
   - {fileID: 747231143}
-  m_Father: {fileID: 2079328118}
-  m_RootOrder: 2
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &945519797
 MonoBehaviour:
@@ -12843,7 +12843,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 945519800}
-  radius: 20
+  radius: 10
   aiAnim: {fileID: 945519803}
   score: 0
   gameManager: {fileID: 1343516535}
@@ -13514,7 +13514,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &968797676
 Transform:
   m_ObjectHideFlags: 0
@@ -13626,7 +13626,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &978020562
 Transform:
   m_ObjectHideFlags: 0
@@ -13635,7 +13635,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 978020561}
   m_LocalRotation: {x: -0.000000029802322, y: 0.000000029802322, z: 0.7071067, w: 0.70710695}
-  m_LocalPosition: {x: -4.92, y: 2, z: -0.01}
+  m_LocalPosition: {x: -4.92, y: 2, z: 5.26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16260,15 +16260,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1146550973}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.66, y: 0, z: -1.97}
+  m_LocalPosition: {x: -0.66, y: 0, z: -1.77}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1050533194}
   - {fileID: 420876076}
   - {fileID: 200878080}
-  m_Father: {fileID: 2079328118}
-  m_RootOrder: 3
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1146550975
 MonoBehaviour:
@@ -16295,7 +16295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 1146550978}
-  radius: 20
+  radius: 10
   aiAnim: {fileID: 1146550981}
   score: 0
   gameManager: {fileID: 1343516535}
@@ -17682,7 +17682,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 1260687187}
-  radius: 20
+  radius: 10
   aiAnim: {fileID: 1260687190}
   score: 0
   gameManager: {fileID: 1343516535}
@@ -17794,15 +17794,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1260687184}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.254, y: 0, z: -1.97}
+  m_LocalPosition: {x: -1.254, y: 0, z: -1.77}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1287122898}
   - {fileID: 431210641}
   - {fileID: 187443791}
-  m_Father: {fileID: 2079328118}
-  m_RootOrder: 1
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1260687192
 MonoBehaviour:
@@ -18803,6 +18803,11 @@ MonoBehaviour:
   - {fileID: 1421447656}
   levelText: {fileID: 1199642391}
   Player: {fileID: 1526554762776118507}
+  level1Obstacle: {fileID: 1866456479}
+  level2Obstacle: {fileID: 978020561}
+  level3Obstacle: {fileID: 943432511}
+  level4Obstacle: {fileID: 968797675}
+  level5Obstacle: {fileID: 1385477147}
   finalScores:
   - 
   - 
@@ -20274,7 +20279,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1441269806
 GameObject:
@@ -21108,7 +21113,7 @@ GameObject:
   m_TagString: hittable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1505887250
 Transform:
@@ -22652,7 +22657,7 @@ GameObject:
   m_TagString: hittable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1585444578
 Transform:
@@ -26297,11 +26302,11 @@ GameObject:
   - component: {fileID: 1866456484}
   m_Layer: 0
   m_Name: Mur
-  m_TagString: Untagged
+  m_TagString: Murr
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!64 &1866456480
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -28244,7 +28249,7 @@ GameObject:
   m_TagString: hittable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2031713305
 Transform:
@@ -29987,41 +29992,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2077365999}
   m_CullTransparentMesh: 1
---- !u!1 &2079328117
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2079328118}
-  m_Layer: 0
-  m_Name: AI Players
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2079328118
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2079328117}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 6419218748782675983}
-  - {fileID: 1260687191}
-  - {fileID: 945519796}
-  - {fileID: 1146550974}
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2094515643
 GameObject:
   m_ObjectHideFlags: 0
@@ -30187,7 +30157,7 @@ GameObject:
   m_TagString: hittable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2097376043
 Transform:
@@ -33653,7 +33623,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1526554762776118507}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.11, y: 0.0000009536743, z: -1.89}
+  m_LocalPosition: {x: -2.11, y: 0.0000009536743, z: -1.78}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -33662,7 +33632,7 @@ Transform:
   - {fileID: 877242165}
   - {fileID: 718443132}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2589477894848269576
 MeshFilter:
@@ -37441,15 +37411,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8020625793051720220}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.7, y: 0, z: -1.97}
+  m_LocalPosition: {x: -1.7, y: 0, z: -1.77}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3756299415041012696}
   - {fileID: 2973114601711942593}
   - {fileID: 8818494326856538562}
-  m_Father: {fileID: 2079328118}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6421008505413279111
 GameObject:
@@ -40792,7 +40762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 4008105471023818099}
-  radius: 20
+  radius: 10
   aiAnim: {fileID: 4008105471023818101}
   score: 0
   gameManager: {fileID: 1343516535}
