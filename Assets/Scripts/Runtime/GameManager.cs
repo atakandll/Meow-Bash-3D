@@ -115,6 +115,21 @@ namespace Runtime
             endScreen.SetActive(false);
 
         }
+
+        public void GetExtraScore()
+        {
+            int currentScore = int.Parse(textScore.text);
+            int scoreTotal = PlayerPrefs.GetInt("scoreTotal", 0);
+            scoreTotal += (currentScore + 500) / 100;
+            PlayerPrefs.SetInt("scoreTotal", scoreTotal);
+
+            Debug.Log("Current Score: " + currentScore);
+            Debug.Log("New Total Score: " + scoreTotal);
+
+            textScore.text = scoreTotal.ToString();
+            finalTextScore.text = scoreTotal.ToString();
+            finalScoresText[0].text = finalScores[0] = "Your Score : " + scoreTotal.ToString();
+        }
     }
 }
 

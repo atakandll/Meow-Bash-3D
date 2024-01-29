@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.unity.ads": "4.4.2",
     "com.unity.collab-proxy": "2.0.1",
     "com.unity.feature.development": "1.0.1",
     "com.unity.ide.rider": "3.0.18",
