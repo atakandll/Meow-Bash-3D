@@ -21,6 +21,8 @@ namespace Runtime
         [SerializeField] private TextMeshProUGUI textScore;
         [SerializeField] private TextMeshProUGUI finalTextScore;
         [SerializeField] private TextMeshProUGUI bestScoreText;
+        [SerializeField] private TextMeshProUGUI[] finalScoresText;
+        public string[] finalScores;
         public AI[] ai;
         
         
@@ -59,6 +61,15 @@ namespace Runtime
                 CancelInvoke();
                 endScreen.SetActive(true);
                 finalTextScore.text = "Score: " + textScore.text;
+                finalScores[0] = "Your Score : " + textScore.text;
+                finalScores[1] = ai[0].gameObject.name + " : " + ai[0].score;
+                finalScores[2] = ai[1].gameObject.name + " : " + ai[1].score;
+                
+
+                for (int i = 0; i <= 2; i++)
+                {
+                    finalScoresText[i].text = finalScores[i];
+                }
             }
         }
 
