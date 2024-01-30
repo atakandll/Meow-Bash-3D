@@ -19790,7 +19790,7 @@ MonoBehaviour:
   - {fileID: 1214913614}
   - {fileID: 1325862323}
   endScreen: {fileID: 1325862323}
-  timerValue: 25
+  timerValue: 5
   textTimer: {fileID: 1370555175}
   textScore: {fileID: 879167408}
   finalTextScore: {fileID: 2053811542}
@@ -19830,7 +19830,7 @@ MonoBehaviour:
   DaysPlayed: 0
   skin2Button: {fileID: 0}
   currentCoins: 2000
-  currentScore: 0
+  currentScore: 5000
 --- !u!114 &1343516537
 MonoBehaviour:
   m_ObjectHideFlags: 0

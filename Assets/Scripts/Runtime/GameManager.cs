@@ -188,6 +188,9 @@ namespace Runtime
             int actualLevel = Mathf.FloorToInt(scoreTotal / 1500) + 1;
             Debug.Log("Actual Level: " + actualLevel);
             PlayerPrefs.SetInt("level",actualLevel);
+            
+            if(actualLevel > PlayerPrefs.GetInt("levelMax",0))
+                PlayerPrefs.SetInt("levelMax",actualLevel);
 
            
             
