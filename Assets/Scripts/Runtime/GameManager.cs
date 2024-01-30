@@ -26,7 +26,7 @@ namespace Runtime
         [SerializeField] private GameObject level2Obstacle;
         [SerializeField] private GameObject level3Obstacle;
         [SerializeField] private GameObject level4Obstacle;
-        [SerializeField] private GameObject level5Obstacle;
+        [SerializeField] private GameObject finalLevelPanel;
         public string[] finalScores;
         
         public AI[] ai;
@@ -98,6 +98,11 @@ namespace Runtime
                     level4Obstacle.SetActive(false);
                     Debug.Log("Level 5 obstacle destroyed");
                     break;
+                case 6:
+                    tutorials[0].SetActive(false);
+                    finalLevelPanel.SetActive(true);
+                    break;
+                    
                
             }
         }
@@ -225,6 +230,23 @@ namespace Runtime
             textScore.text = scoreTotal.ToString();
             finalTextScore.text = scoreTotal.ToString();
             finalScoresText[0].text = finalScores[0] = "Your Score : " + scoreTotal.ToString();
+        }
+
+        public void MainMenuButton()
+        {
+            
+            PlayerPrefs.DeleteAll();
+            PlayerPrefs.Save(); 
+            Debug.Log("PlayerPrefs verileri silindi");
+
+            
+            Invoke("QuitGame", 0.5f);
+        }
+
+        private void QuitGame()
+        {
+            Application.Quit();
+            Debug.Log("Oyun kapatılıyor");
         }
     }
 }
