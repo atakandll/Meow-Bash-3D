@@ -57,5 +57,20 @@ progress through the game.
     
  ![Screenshot_309](https://github.com/atakandll/Meow-Bash/assets/130579265/28bdca72-94d0-4952-9056-93dd1a694423)
 
+ ## In-game graphics
+ 
+![Screenshot_308](https://github.com/atakandll/Meow-Bash/assets/130579265/37245a13-3946-47dc-a650-16656d995244)
+
+ 
+ ![Screenshot_311](https://github.com/atakandll/Meow-Bash/assets/130579265/9e8f6563-c63a-4a68-9c12-34c254367d6e)
+ 
+![Screenshot_313](https://github.com/atakandll/Meow-Bash/assets/130579265/ca1bfe9a-3971-4a20-b3d8-595625919ccc)
+
+ ![Screenshot_312](https://github.com/atakandll/Meow-Bash/assets/130579265/b44ea163-be6f-4dcd-bac0-ca2ee8025fbb)
+
+
+
+ 
+
   
 
