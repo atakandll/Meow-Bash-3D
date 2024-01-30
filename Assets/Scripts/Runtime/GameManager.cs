@@ -1,9 +1,7 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
+
 
 namespace Runtime
 {
@@ -46,13 +44,18 @@ namespace Runtime
             }
             bestScoreText.text ="Best: " + PlayerPrefs.GetInt("scoreMax",0).ToString();
         }
-        
+
+        private void Start()
+        {
+            SetInitialPositions();
+        }
+
 
         public void StartGame()
         {
             GameStartarted = true;
             tutorials[0].SetActive(false);
-            SetInitialPositions();
+          
             InvokeRepeating("SetTimer",1,1);
             
             foreach (var a in ai)
@@ -68,27 +71,31 @@ namespace Runtime
             {
                 case 1:
                     SetPositionsForLevel1();
-                    level1Obstacle.SetActive(false);
-                    Debug.Log("Level 1 obstacle destroyed");
                     break;
                 case 2:
                     SetPositionsForLevel2();
-                    level2Obstacle.SetActive(false);
+                    level1Obstacle.SetActive(false);
                     Debug.Log("Level 2 obstacle destroyed");
                     break;
                 case 3:
                     SetPositionsForLevel3();
-                    level3Obstacle.SetActive(false);
+                    level1Obstacle.SetActive(false);
+                    level2Obstacle.SetActive(false);
                     Debug.Log("Level 3 obstacle destroyed");
                     break;
                 case 4:
                     SetPositionsForLevel4();
-                    level4Obstacle.SetActive(false);
+                    level1Obstacle.SetActive(false);
+                    level2Obstacle.SetActive(false);
+                    level3Obstacle.SetActive(false);
                     Debug.Log("Level 4 obstacle destroyed");
                     break;
                 case  5:
                     SetPositionsForLevel5();
-                    level5Obstacle.SetActive(false);
+                    level1Obstacle.SetActive(false);
+                    level2Obstacle.SetActive(false);
+                    level3Obstacle.SetActive(false);
+                    level4Obstacle.SetActive(false);
                     Debug.Log("Level 5 obstacle destroyed");
                     break;
                
@@ -98,48 +105,50 @@ namespace Runtime
         private void SetPositionsForLevel1()
         {
           
-            Player.transform.position = new Vector3(0f, 1f, 0f);
-            ai[0].transform.position = new Vector3(1f, 1f, 0f);
-            ai[1].transform.position = new Vector3(-1f, 1f, 0f);
-            ai[2].transform.position = new Vector3(1f, -1f, 0f);
-            ai[3].transform.position = new Vector3(-1f, -1f, 0f);
+            Player.transform.position = new Vector3(-2.11f, 9.536743e-07f, -1.77f);
+            Debug.Log(Player.transform.position);
+            ai[0].transform.position = new Vector3(-1.7f, 0, -1.77f);
+            ai[1].transform.position = new Vector3(-1.254f, 0, -1.77f);
+            ai[2].transform.position = new Vector3(-2.6f, 0f, -1.77f);
+            ai[3].transform.position = new Vector3(-0.66f, 0f, -1.77f);
         }
 
         private void SetPositionsForLevel2()
         {
            
-            Player.transform.position = new Vector3(0f, 2f, 0f);
-            ai[0].transform.position = new Vector3(2f, 2f, 0f);
-            ai[1].transform.position = new Vector3(-2f, 2f, 0f);
-            ai[2].transform.position = new Vector3(2f, -2f, 0f);
-            ai[3].transform.position = new Vector3(-2f, -2f, 0f);
+            Player.transform.position = new Vector3(-2.11f, 9.536743e-07f, -5.5f);
+            Debug.Log(Player.transform.position);
+            ai[0].transform.position = new Vector3(-1.7f, 0, -5.5f);
+            ai[1].transform.position = new Vector3(-1.254f, 0, -5.5f);
+            ai[2].transform.position = new Vector3(-2.6f, 0f, -5.5f);
+            ai[3].transform.position = new Vector3(-0.66f, 0f, -5.5f);
         }
         private void SetPositionsForLevel3()
         {
             
-            Player.transform.position = new Vector3(0f, 1f, 0f);
-            ai[0].transform.position = new Vector3(1f, 1f, 0f);
-            ai[1].transform.position = new Vector3(-1f, 1f, 0f);
-            ai[2].transform.position = new Vector3(1f, -1f, 0f);
-            ai[3].transform.position = new Vector3(-1f, -1f, 0f);
+            Player.transform.position = new Vector3(-2.11f, 9.536743e-07f, -9.3f);
+            ai[0].transform.position = new Vector3(-1.7f, 0, -9.3f);
+            ai[1].transform.position = new Vector3(-1.254f, 0, -9.3f);
+            ai[2].transform.position = new Vector3(-2.6f, 0f, -9.3f);
+            ai[3].transform.position = new Vector3(-0.66f, 0f, -9.3f);
         }
         private void SetPositionsForLevel4()
         {
             
-            Player.transform.position = new Vector3(0f, 1f, 0f);
-            ai[0].transform.position = new Vector3(1f, 1f, 0f);
-            ai[1].transform.position = new Vector3(-1f, 1f, 0f);
-            ai[2].transform.position = new Vector3(1f, -1f, 0f);
-            ai[3].transform.position = new Vector3(-1f, -1f, 0f);
+            Player.transform.position = new Vector3(-2.11f, 9.536743e-07f, -13.1f);
+            ai[0].transform.position = new Vector3(-1.7f, 0, -13.1f);
+            ai[1].transform.position = new Vector3(-1.254f, 0, -13.1f);
+            ai[2].transform.position = new Vector3(-2.6f, 0f, -13.1f);
+            ai[3].transform.position = new Vector3(-0.66f, 0f, -13.1f);
         }
         private void SetPositionsForLevel5()
         {
             
-            Player.transform.position = new Vector3(0f, 1f, 0f);
-            ai[0].transform.position = new Vector3(1f, 1f, 0f);
-            ai[1].transform.position = new Vector3(-1f, 1f, 0f);
-            ai[2].transform.position = new Vector3(1f, -1f, 0f);
-            ai[3].transform.position = new Vector3(-1f, -1f, 0f);
+            Player.transform.position = new Vector3(-2.11f, 9.536743e-07f, -17f);
+            ai[0].transform.position = new Vector3(-1.7f, 0, -17f);
+            ai[1].transform.position = new Vector3(-1.254f, 0, -17f);
+            ai[2].transform.position = new Vector3(-2.6f, 0f, -17f);
+            ai[3].transform.position = new Vector3(-0.66f, 0f, -17f);
         }
 
         public void SetTimer()
@@ -171,7 +180,8 @@ namespace Runtime
             int scoreTotal = PlayerPrefs.GetInt("scoreTotal",0);
             scoreTotal += currentScore;
             PlayerPrefs.SetInt("scoreTotal",scoreTotal);
-            int actualLevel = Mathf.FloorToInt(scoreTotal / 1000) + 1;
+            int actualLevel = Mathf.FloorToInt(scoreTotal / 1500) + 1;
+            Debug.Log("Actual Level: " + actualLevel);
             PlayerPrefs.SetInt("level",actualLevel);
 
            
