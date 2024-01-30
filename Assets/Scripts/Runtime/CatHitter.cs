@@ -1,6 +1,4 @@
-﻿using System;
-using System.Security.Cryptography.X509Certificates;
-using UnityEngine;
+﻿using UnityEngine;
 using Random = UnityEngine.Random;
 using TMPro;
 

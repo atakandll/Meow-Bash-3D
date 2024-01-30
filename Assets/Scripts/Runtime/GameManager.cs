@@ -141,19 +141,19 @@ namespace Runtime
         {
             
             Player.transform.position = new Vector3(-2.11f, 9.536743e-07f, -13.1f);
-            ai[0].transform.position = new Vector3(-1.7f, 0, -13.1f);
-            ai[1].transform.position = new Vector3(-1.254f, 0, -13.1f);
-            ai[2].transform.position = new Vector3(-2.6f, 0f, -13.1f);
-            ai[3].transform.position = new Vector3(-0.66f, 0f, -13.1f);
+            ai[0].transform.position = new Vector3(-1.7f, 0, -13.5f);
+            ai[1].transform.position = new Vector3(-1.254f, 0, -13.5f);
+            ai[2].transform.position = new Vector3(-2.6f, 0f, -13.5f);
+            ai[3].transform.position = new Vector3(-0.66f, 0f, -13.5f);
         }
         private void SetPositionsForLevel5()
         {
             
-            Player.transform.position = new Vector3(-2.11f, 9.536743e-07f, -17f);
-            ai[0].transform.position = new Vector3(-1.7f, 0, -17f);
-            ai[1].transform.position = new Vector3(-1.254f, 0, -17f);
-            ai[2].transform.position = new Vector3(-2.6f, 0f, -17f);
-            ai[3].transform.position = new Vector3(-0.66f, 0f, -17f);
+            Player.transform.position = new Vector3(-2.11f, 9.536743e-07f, -17.5f);
+            ai[0].transform.position = new Vector3(-1.7f, 0, -17.5f);
+            ai[1].transform.position = new Vector3(-1.254f, 0, -17.5f);
+            ai[2].transform.position = new Vector3(-2.6f, 0f, -17.5f);
+            ai[3].transform.position = new Vector3(-0.66f, 0f, -17.5f);
         }
 
         public void SetTimer()
@@ -203,8 +203,7 @@ namespace Runtime
 
         public void WatchExtraTimeVideo()
         {
-            //
-            //
+            
             GetExtraTime();
         }
         public void GetExtraTime()

@@ -43,6 +43,6 @@ Material:
     - _Steps: 3
     - _StpSmooth: 0
     m_Colors:
-    - _Color: {r: 0, g: 0, b: 0, a: 1}
+    - _Color: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 1}
     - _ShnColor: {r: 0.11443538, g: 0.11443538, b: 0.09305898, a: 1}
   m_BuildTextureStacks: []
