@@ -10,6 +10,7 @@ progress through the game.
 
 ![İsimsiz video ‐ Clipchamp ile yapıldı](https://github.com/atakandll/Meow-Bash/assets/130579265/737eb23d-6a62-4fbc-a388-d58095c6111e)
 
+
 ## Gameplay
 
  **Controls:**
@@ -27,9 +28,18 @@ progress through the game.
     
     ![İsimsiz video ‐ Clipchamp ile yapıldı (3)](https://github.com/atakandll/Meow-Bash/assets/130579265/c24b0a96-31ca-4c40-a9a0-a5cb8c4a7df9)
 
+ ## In-game graphics
+ 
+ ![Screenshot_308](https://github.com/atakandll/Meow-Bash/assets/130579265/37245a13-3946-47dc-a650-16656d995244)      ![Screenshot_311](https://github.com/atakandll/Meow-Bash/assets/130579265/9e8f6563-c63a-4a68-9c12-34c254367d6e)
 
+ 
+ ![Screenshot_313](https://github.com/atakandll/Meow-Bash/assets/130579265/ca1bfe9a-3971-4a20-b3d8-595625919ccc)     ![Screenshot_312](https://github.com/atakandll/Meow-Bash/assets/130579265/b44ea163-be6f-4dcd-bac0-ca2ee8025fbb)
 
- **Levels:**
+ 
+
+## Development
+
+**Levels:**
   - Start in different rooms of the house, with new rooms unlocking after each level.
   
  **Progression:**
@@ -37,17 +47,14 @@ progress through the game.
     
   **Skins:**
   - You can play with 9 different skins at the beginning of each level.
-  - ![Screenshot_316](https://github.com/atakandll/Meow-Bash/assets/130579265/be7ba00a-8632-4ce6-9865-de79b9879fe9)
+    
+   ![Screenshot_316](https://github.com/atakandll/Meow-Bash/assets/130579265/be7ba00a-8632-4ce6-9865-de79b9879fe9)
 
-
-  
 
  **Achievements:**
   - Unlock various achievements by completing tasks, such as playing the game for three consecutive days or reaching a score of 1000.
+    
    ![Screenshot_315](https://github.com/atakandll/Meow-Bash/assets/130579265/f913a609-c332-47d4-b8a6-da664be6f887)
-
-
-## Development
 
 - **Achievements System:**
   - Implemented a simple yet engaging achievement system to keep players invested in the game.
@@ -57,16 +64,8 @@ progress through the game.
     
  ![Screenshot_309](https://github.com/atakandll/Meow-Bash/assets/130579265/28bdca72-94d0-4952-9056-93dd1a694423)
 
- ## In-game graphics
- 
-![Screenshot_308](https://github.com/atakandll/Meow-Bash/assets/130579265/37245a13-3946-47dc-a650-16656d995244)
 
- 
- ![Screenshot_311](https://github.com/atakandll/Meow-Bash/assets/130579265/9e8f6563-c63a-4a68-9c12-34c254367d6e)
- 
-![Screenshot_313](https://github.com/atakandll/Meow-Bash/assets/130579265/ca1bfe9a-3971-4a20-b3d8-595625919ccc)
 
- ![Screenshot_312](https://github.com/atakandll/Meow-Bash/assets/130579265/b44ea163-be6f-4dcd-bac0-ca2ee8025fbb)
 
 
 
