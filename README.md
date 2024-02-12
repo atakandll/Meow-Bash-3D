@@ -1,6 +1,6 @@
 # Meow Bash 3D
 
-It will be on playstore very soon..
+`Google Play link:`   https://play.google.com/store/apps/details?id=com.atakandll.MeowBash
 
 Watch the `gameplay` of the Meow Bash 3D:  https://www.youtube.com/watch?v=K5bBMt2Rdgk
 
